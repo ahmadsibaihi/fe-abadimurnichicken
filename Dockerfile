@@ -1,14 +1,17 @@
-# Tahap 1: Build React menggunakan Node.js
-FROM node:18-alpine as build-stage
+# Gunakan versi Full agar lebih stabil saat install
+FROM node:18 as build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+
+# Tambahkan flag legacy agar tidak bentrok library
+RUN npm install --legacy-peer-deps
+
 COPY . .
 RUN npm run build
 
-# Tahap 2: Jalankan hasil build menggunakan Nginx
+# Tahap Nginx tetap pakai alpine biar ringan
 FROM nginx:stable-alpine
-# PENTING: Jika kamu pakai VITE, foldernya 'dist'. Jika pakai Create-React-App, ganti 'dist' jadi 'build'
+# SESUAIKAN: ganti /dist menjadi /build jika kamu TIDAK pakai Vite
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
