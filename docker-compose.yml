@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:80" # Kita buka di port 3000 VPS biar gak bentrok
+    restart: always
