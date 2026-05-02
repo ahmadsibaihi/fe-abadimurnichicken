@@ -1,7 +1,10 @@
 version: '3.8'
 services:
   frontend:
-    build: .
+    image: nginx:stable-alpine
+    container_name: amc-frontend-final
     ports:
-      - "3000:80" # Kita buka di port 3000 VPS biar gak bentrok
+      - "3000:80"
+    volumes:
+      - /root/fe-abadimurnichicken/dist:/usr/share/nginx/html
     restart: always
