@@ -59,7 +59,7 @@ const Signin = () => {
                 <div className="login-userheading">
                   <h3>Masuk</h3>
                   <h4>
-                    Masukan email dan password untuk mengakses aMc dashboard.
+                    Masukan Email dan Kata Sandi untuk mengakses aMc dashboard.
                   </h4>
                 </div>
                 <div className="form-login mb-3">
