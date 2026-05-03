@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import ImageWithBasePath from "../../../core/img/imagewithbasebath";
 import { all_routes } from "../../../Router/all_routes";
-import API from "../../../api/api"; // pastikan path menuju file api.js Anda
+import API from "../../../api/api"; 
 import Swal from "sweetalert2";
 
 const Signin = () => {
@@ -59,7 +59,7 @@ const Signin = () => {
                 <div className="login-userheading">
                   <h3>Masuk</h3>
                   <h4>
-                    Masukan email dan password untuk mengakses aMc dashboard
+                    Masukan email dan password untuk mengakses aMc dashboard.
                   </h4>
                 </div>
                 <div className="form-login mb-3">
