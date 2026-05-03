@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'https://api.syibaihidev.site/api',
+    baseURL: process.env.REACT_APP_API_URL
 });
 
 // --- Request Interceptor: tambahkan token ke setiap request ---
