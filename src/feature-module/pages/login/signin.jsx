@@ -51,22 +51,23 @@ const Signin = () => {
             <form onSubmit={handleSubmit}>
               <div className="login-userset">
                 <div className="login-logo logo-normal">
-                  {/* <ImageWithBasePath src="assets/img/logo.png" alt="img" /> */}
+                  <ImageWithBasePath src="assets/img/logoamc.png" alt="img" />
                 </div>
                 <Link to={route.dashboard} className="login-logo logo-white">
                   <ImageWithBasePath src="assets/img/logo-white.png" alt="logo" />
                 </Link>
                 <div className="login-userheading">
-                  <h3>Sign In</h3>
+                  <h3>Masuk</h3>
                   <h4>
-                    Access the Dreamspos panel using your email and passcode.
+                    Masukan email dan password untuk mengakses aMc dashboard
                   </h4>
                 </div>
                 <div className="form-login mb-3">
-                  <label className="form-label">Email Address</label>
+                  <label className="form-label">Email</label>
                   <div className="form-addons">
                     <input
                       type="email"
+                      placeholder="Masukkan Email"
                       className="form-control"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -76,11 +77,12 @@ const Signin = () => {
                   </div>
                 </div>
                 <div className="form-login mb-3">
-                  <label className="form-label">Password</label>
+                  <label className="form-label">Kata Sandi</label>
                   <div className="pass-group">
                     <input
                       type={showPassword ? "text" : "password"}
                       className="pass-input form-control"
+                      placeholder="Masukkan Kata Sandi"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
@@ -102,20 +104,20 @@ const Signin = () => {
                           Remember me
                         </label>
                       </div>
-                      <div className="text-end">
+                      {/* <div className="text-end">
                         <Link className="forgot-link" to={route.forgotPassword}>
                           Forgot Password?
                         </Link>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
                 <div className="form-login">
                   <button type="submit" className="btn btn-login" disabled={loading}>
-                    {loading ? "Loading..." : "Sign In"}
+                    {loading ? "Loading..." : "Masuk Sekarang"}
                   </button>
                 </div>
-                <div className="signinform">
+                {/* <div className="signinform">
                   <h4>
                     New on our platform?
                     <Link to={route.register} className="hover-a">
@@ -123,7 +125,7 @@ const Signin = () => {
                       Create an account
                     </Link>
                   </h4>
-                </div>
+                </div> */}
                 {/* <div className="form-setlogin or-text">
                   <h4>OR</h4>
                 </div>
