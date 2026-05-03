@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Header from "../InitialPage/Sidebar/Header";
 import Sidebar from "../InitialPage/Sidebar/Sidebar";
 import { pagesRoute, posRoutes, publicRoutes } from "./router.link";
@@ -53,6 +53,9 @@ const AllRoutes = () => {
   return (
     <div>
       <Routes>
+        
+        <Route path="/login" element={<Navigate to="/signin" replace />} />
+
         <Route path="/pos" element={<Pospages />}>
           {posRoutes.map((route, id) => (
             <Route path={route.path} element={route.element} key={id} />
