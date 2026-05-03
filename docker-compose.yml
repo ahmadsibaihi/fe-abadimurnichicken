@@ -2,7 +2,7 @@ version: '3.8'
 services:
   frontend:
     image: nginx:stable-alpine
-    container_name: amc-frontend-final
+    container_name: fe-abadimurnichicken
     ports:
       - "3000:80"
     volumes:
