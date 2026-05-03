@@ -1,10 +1,9 @@
 version: '3.8'
+
 services:
   frontend:
-    image: nginx:stable-alpine
+    build: .
     container_name: fe-abadimurnichicken
     ports:
       - "3000:80"
-    volumes:
-      - /root/fe-abadimurnichicken/dist:/usr/share/nginx/html
     restart: always
